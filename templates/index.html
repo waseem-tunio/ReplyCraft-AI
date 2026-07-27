@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplyCraft AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Top Right Badge -->
+        <span class="tag">Waseem Tunio</span>
+
+        <!-- Heading -->
+        <h1>📧 ReplyCraft AI</h1>
+
+        <p class="subtitle">
+            Generate professional AI-powered email replies in seconds.
+        </p>
+
+        <!-- Email Input -->
+        <textarea
+            id="email"
+            placeholder="Paste the received email here..."></textarea>
+
+        <!-- Tone Selection -->
+        <label for="tone">Select Reply Tone</label>
+
+        <select id="tone">
+            <option value="Professional">Professional</option>
+            <option value="Friendly">Friendly</option>
+            <option value="Formal">Formal</option>
+        </select>
+
+        <!-- Generate Button -->
+        <button id="generateBtn">
+            ✨ Generate Reply
+        </button>
+
+        <!-- Loading -->
+        <div id="loading">
+            ⏳ Generating AI Reply...
+        </div>
+
+        <!-- Output -->
+        <div class="output-box">
+
+            <div class="output-header">
+
+                <h2>Generated Reply</h2>
+
+                <button id="copyBtn">
+                    📋 Copy
+                </button>
+
+            </div>
+
+            <pre id="reply"></pre>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
